@@ -1,0 +1,15 @@
+.border::after {
+    background: linear-gradient(120deg, rgba(107, 127, 255, 0.5), rgba(196, 239, 23, 0.8));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate 6s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate;
+}

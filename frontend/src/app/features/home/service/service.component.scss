@@ -1,0 +1,44 @@
+#service::after {
+    background-image: linear-gradient(rgba(196, 239, 23, 0.118) 0.8px, transparent 0.8px), linear-gradient(to right, rgba(196, 239, 23, 0.118) 0.8px, rgba(12, 15, 0, 0) 0.8px);
+}
+
+#service-item::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.1;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(120deg, rgba(107, 127, 255, 0.5), rgba(196, 239, 23, 0.8));
+    mask: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px) content-box exclude, linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px);
+    transition: 0.3s ease-in-out;
+}
+
+#service-item:hover::after {
+    opacity: 1;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.rotate-custom {
+  animation: rotate 5s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.floating-custom {
+  animation: 3s cubic-bezier(0.41, 0.15, 0.64, 0.86) 0s infinite alternate none running floating ;
+}

@@ -1,0 +1,17 @@
+<a
+  [href]="href"
+  [ngClass]="['btn', className]"
+  [target]="target"
+  (click)="handleClick($event)" 
+>
+  <strong><ng-content></ng-content></strong>
+
+  <div id="container-stars">
+    <div id="stars"></div>
+  </div>
+
+  <div id="glow">
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+</a>

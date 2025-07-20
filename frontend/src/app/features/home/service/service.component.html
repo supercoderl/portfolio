@@ -1,0 +1,128 @@
+<section
+  id="service"
+  class="py-[90px] bg-size-[100px] w-full h-full overflow-hidden relative after:content-[''] after:bg-[#0A0A09] after:bg-[100px_100px] after:w-full after:h-full after:top-0 after:left-0 after:opacity-40 after:-z-2 after:absolute"
+>
+  <div class="max-w-[1080px] w-full mx-auto px-3">
+    <div class="aos-init aos-animate">
+      <div class="flex flex-wrap -mx-3 -mt-6">
+        <!-- Left Column -->
+        <div class="flex-[0_0_auto] w-[41.66666667%] px-3 mt-6">
+          <div>
+            <div class="pb-12">
+              <div
+                class="text-[1.25rem] font-medium text-[#56DFCF] mb-2.5 flex items-center"
+              >
+                <span class="block mr-2 max-w-[32px]">
+                  <img
+                    src="../../../../assets/images/labels/star.png"
+                    alt="star icon"
+                  />
+                </span>
+                Service
+              </div>
+              <h2
+                class="mb-5 text-capitalize text-[3rem] font-semibold text-[rgb(251,_255,_237)]"
+              >
+                Exceptional UI/UX
+                <span class="text-[#F72C5B]">Services</span>
+              </h2>
+              <p class="mt-5 mb-0 text-[rgb(159,_160,_166)] text-[1.125rem]">
+                Experience excellence with our UI/UX services. From user
+                research to seamless design implementation, we in crafting
+                innovative solutions experiences and drive engagement for the
+                users of business and services.
+              </p>
+            </div>
+
+            <app-button href="about" className="!rounded-full">
+              Hire me
+            </app-button>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="flex-[0_0_auto] w-[58.33333333%] px-3 mt-6">
+          <div
+            class="pl-[40px] gap-[1rem] relative grid"
+            id="servicesAccordion"
+          >
+            <!-- Card 1 -->
+            <div
+              class="bg-[#141413] relative rounded-[12px] overflow-hidden"
+              id="service-item"
+              *ngFor="let service of services; let i = index"
+            >
+              <div
+                class="bg-[#141413] rounded-[12px] items-center justify-between flex"
+              >
+                <button
+                  class="rounded-t-[5px] cursor-pointer z-2 py-[1.5rem] px-[2rem] flex-[1_1_0%] relative flex items-center w-full text-[1rem]"
+                  type="button"
+                  (click)="toggleCollapse(i)"
+                >
+                  <span class="text-[24px] font-bold text-[#FBFFED] m-0"
+                    >Visual Design</span
+                  >
+                </button>
+                <app-button className="!rounded-full !p-0 !w-12 !h-12 mr-8">
+                  <svg
+                    class="svg-inline--fa fa-arrow-right-long transition-transform duration-300"
+                    [class.-rotate-45]="expandedIndex === i"
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="arrow-right-long"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    data-fa-i2svg=""
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
+                    ></path>
+                  </svg>
+                </app-button>
+              </div>
+
+              <!-- Content container with CSS Grid animation -->
+              <div
+                class="grid transition-all duration-300 ease-out overflow-hidden"
+                [class.grid-rows-[1fr]]="expandedIndex === i"
+                [class.grid-rows-[0fr]]="expandedIndex !== i"
+              >
+                <div class="min-h-0 overflow-hidden">
+                  <div class="px-8 pb-6">
+                    <p class="mb-6 text-[16px] text-[rgb(173,_181,_189)]">
+                      Transform your ideas into stunning visual experiences with
+                      our expert design services.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="-bottom-[10%] -left-[10%] w-[390px] h-[390px] bg-[rgba(196,_239,_23,_0.2)] blur-[100px] -z-1 rounded-full absolute"
+  ></div>
+  <div>
+    <span class="block left-[200px] top-[500px] floating-custom absolute"
+      ><img
+        src="https://thetork.com/demos/html/torkfolio/assets/images/icon/shape/lefttorightarrow-lg.svg"
+        alt="left to right icon"
+    /></span>
+
+    <span
+      class="block left-[5%] bottom-[100px] w-[40px] opacity-50 rotate-custom absolute"
+    >
+      <img
+        src="https://thetork.com/demos/html/torkfolio/assets/images/icon/shape/diamond-star2.svg"
+        alt="left to right icon"
+      />
+    </span>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+<section
+  id="category"
+  class="py-[40px] before-gradient before:content-[''] before:w-full before:h-[1.5px] -before:rotate-180 before:bottom-0 before:left-0 after:content-[''] after:w-full after:h-[1.5px] after:top-0 after:left-0"
+>
+  <div class="max-w-[1170px] w-full px-3 mx-auto">
+    <div class="mx-auto relative overflow-hidden p-0">
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let item of arr">
+          <div class="carousel-item">
+            <div class="flex items-center justify-center flex-wrap">
+              <span class="mr-[32px] max-w-[64px]">
+                <img
+                  src="../../../../assets/images/logo/logo.png"
+                  alt="Sakura Icon"
+                />
+              </span>
+              <h5 class="text-white text-[20px] font-medium leading-[25px]">App Design</h5>
+            </div>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </div>
+</section>

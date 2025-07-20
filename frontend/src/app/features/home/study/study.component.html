@@ -1,0 +1,138 @@
+<section
+  id="study"
+  class="bg-[rgb(18,_18,_17)] py-[90px] overflow-hidden relative"
+>
+  <div class="max-w-[1170px] px-3 mx-auto w-full">
+    <div class="flex flex-wrap -mt-6 -mx-3">
+      <div class="flex-[0_0_auto] w-[41.66666667%] px-3">
+        <div>
+          <div class="pb-12">
+            <div
+              class="text-[1.25rem] font-medium text-[#56DFCF] mb-2.5 flex items-center"
+            >
+              <span class="mr-2 max-w-[32px]">
+                <img
+                  src="../../../../assets/images/labels/star.png"
+                  alt="star icon"
+              /></span>
+              Explore
+            </div>
+            <h2
+              class="mb-5 text-capitalize text-[#FBFFED] text-[3rem] font-semibold"
+            >
+              Explore our Latest
+              <span class="text-[#F72C5B]">Case Studies</span>
+            </h2>
+            <p class="mt-5 mb-0 text-[rgb(159,_160,_166)] text-[1.125rem]">
+              Experience excellence with our UI/UX . From user research to
+              seamless design implementation.
+            </p>
+          </div>
+
+          <div
+            class="w-fit h-fit rounded-full p-2 gap-[24px] flex items-center bg-[rgb(36,_36,_35)]"
+          >
+            <app-button
+              tabindex="0"
+              className="!p-0 !w-12 !h-12 !rounded-full"
+              (click)="owlCar.prev()"
+            >
+              <svg
+                class="svg-inline--fa fa-arrow-left-long text-white group-hover:text-black"
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="arrow-left-long"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                data-fa-i2svg=""
+              >
+                <path
+                  fill="currentColor"
+                  d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"
+                ></path>
+              </svg>
+            </app-button>
+            <app-button
+              tabindex="0"
+              className="!p-0 !w-12 !h-12 !rounded-full"
+              (clicked)="owlCar.next()"
+            >
+              <svg
+                class="svg-inline--fa fa-arrow-right-long"
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="arrow-right-long"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                data-fa-i2svg=""
+              >
+                <path
+                  fill="currentColor"
+                  d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
+                ></path>
+              </svg>
+            </app-button>
+          </div>
+        </div>
+      </div>
+      <div class="flex-[0_0_auto] w-[58.33333333%] px-3">
+        <div class="mx-auto relative overflow-hidden p-0">
+          <owl-carousel-o [options]="customOptions" #owlCar>
+            <ng-template carouselSlide *ngFor="let item of arr">
+              <div class="carousel-item">
+                <div>
+                  <div
+                    class="item transition-all duration-300 ease-out rounded-[16px] overflow-hidden"
+                  >
+                    <div class="rounded-[8px] overflow-hidden relative group">
+                      <img
+                        src="https://thetork.com/demos/html/torkfolio/assets/images/case-studies/home1/2.png"
+                        alt="Case Studies Images"
+                        class="transition-all duration-300 ease-out w-full"
+                      />
+
+                      <!-- Overlay -->
+                      <div
+                        class="absolute inset-0 after:opacity-50 after:content-[''] after:top-0 after:left-0 after:h-full after:w-full after:transition-all after:duration-300 after:ease-out after:absolute group-hover:after:bg-[#56DFCF]"
+                      ></div>
+
+                      <div
+                        class="absolute top-1/2 -translate-y-1/2 left-0 w-full flex justify-center overflow-hidden transition-all duration-500 ease-out"
+                      >
+                        <a
+                          href="project-details.html"
+                          class="bg-[#F72C5B] text-black text-[16px] py-[15px] px-[30px] cursor-pointer rounded-[8px] transition-all duration-500 ease-out transform translate-y-full group-hover:translate-y-0"
+                          >View Project</a
+                        >
+                      </div>
+                    </div>
+                    <div class="mt-6">
+                      <div>
+                        <span
+                          class="text-[#56DFCF] text-capitalize text-[0.875rem] mb-2 rounded-[8px] font-semibold"
+                          >Restaurants Design</span
+                        >
+                      </div>
+                      <h4
+                        class="transition-all duration-300 ease-out overflow-hidden font-semibold text-[#FBFFED] mb-2 text-[23.1627px]"
+                      >
+                        <a href="project-details.html">Italian food website</a>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </owl-carousel-o>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="absolute -bottom-[10px] -left-[10px] w-[390px] h-[390px] bg-[rgba(196,_239,_23,_0.2)] blur-[100px] -z-1 rounded-[50%]"
+  ></div>
+</section>

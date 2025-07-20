@@ -1,0 +1,43 @@
+#contact::after {
+    content: "";
+    background-color: #0A0A09;
+    background-image: linear-gradient(rgba(196, 239, 23, 0.1176470588) 0.8px, transparent 0.8px), linear-gradient(to right, rgba(196, 239, 23, 0.1176470588) 0.8px, rgba(12, 15, 0, 0) 0.8px);
+    background-size: 100px 100px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    z-index: -2;
+    position: absolute;
+}
+
+#form-container::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 0;
+    opacity: 1;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(120deg, rgba(107, 127, 255, 0.5), rgba(196, 239, 23, 0.8));
+    mask: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px) content-box exclude, linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px);
+    transition: 0.3s ease-in-out;
+}
+
+@keyframes left-right {
+    0% {
+        transform: translateX(30px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.contact-shape {
+    animation: left-right 3s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate;
+}
