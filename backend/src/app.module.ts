@@ -4,13 +4,12 @@ import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ServeStaticModule } from '@nestjs/serve-static';
-import configDefault from 'config/config.default';
 import { join } from 'path';
 import { Log4jsModule } from './libs/log4js';
-import { ExperiencesController } from './experiences/experience.controller';
 import { ExperiencesModule } from './experiences/experience.module';
 import { BlogsModule } from './blogs/blog.module';
 import { MailsModule } from './mails/mail.module';
+import configDefault from './config/config.default';
 
 @Module({
   imports: [
