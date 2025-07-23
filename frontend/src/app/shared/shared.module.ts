@@ -4,6 +4,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RouterModule } from '@angular/router';
 import { ButtonComponent } from './components/button/button.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [],
@@ -17,7 +18,8 @@ import { ButtonComponent } from './components/button/button.component';
     CarouselModule,
     FontAwesomeModule,
     RouterModule,
-    ButtonComponent
+    ButtonComponent,
+    HttpClientModule
   ]
 })
 export class SharedModule { }

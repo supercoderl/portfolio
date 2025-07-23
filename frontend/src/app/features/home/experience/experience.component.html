@@ -30,20 +30,23 @@
     </div>
     <div class="relative">
       <div class="flex flex-wrap -mx-6 -mt-12">
-        <div class="w-full px-6 mt-12" *ngFor="let i of experiences">
+        <div class="w-full px-6 mt-12" *ngFor="let experience of experiences">
           <div
             class="group gap-[40px] flex items-center justify-between flex-wrap"
           >
             <div class="w-[180px] relative">
-              <p class="text-[rgb(159,_160,_166)] mb-4">2025 to Present</p>
+              <p class="text-[rgb(159,_160,_166)] mb-4">
+                {{ experience.startDate }} to
+                {{ experience.isCurrent ? "Present" : experience.endDate }}
+              </p>
               <h6
                 class="text-[1.125rem] leading-[26px] text-[#FBFFED] font-semibold"
               >
-                TRK TTT Studios
+                {{ experience.company }}
               </h6>
 
               <div
-                class="block transition-all duration-300 ease-out content-[''] w-[35px] h-[35px] -right-[20px] z-99 top-1/2 -translate-y-1/2 text-[#242423] absolute group-hover:text-[#F72C5B]"
+                class="block transition-all duration-300 ease-out content-[''] w-[35px] h-[35px] -right-[70px] z-[99] top-1/2 -translate-y-1/2 text-[#242423] absolute group-hover:text-[#F72C5B]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -63,23 +66,22 @@
             </div>
             <div
               id="content"
-              class="flex-1 relative rounded-[12px] bg-[#141413] transition-all duration-300 ease-out p-[32px]"
+              class="flex-[0.9_1_0%] relative rounded-[12px] bg-[#141413] transition-all duration-300 ease-out p-[32px]"
             >
               <div
-                class="gap-[16px] z-2 flex items-center justify-between relative"
+                class="gap-[16px] z-[2] flex items-center justify-between relative"
               >
                 <div
-                  class="flex items-center justify-between min-w-[600px] mb-0"
+                  class="flex items-center justify-between min-w-[500px] mb-0"
                 >
                   <div>
                     <h4 class="text-[#FBFFED] text-[1.525rem] font-bold">
-                      Senior Designer
+                      {{ experience.title }}
                     </h4>
                   </div>
-                  <div class="max-w-[356.928px]">
-                    <p class="mb-0 text-[rgb(159,_160,_166)] text-[1.125rem]">
-                      As a senior UI/UX designer, I bring over 09 years of
-                      experience in crafting experiences.
+                  <div class="max-w-[550px]">
+                    <p class="mb-0 text-[rgb(159,_160,_166)] text-[1.125rem] line-clamp-2">
+                      {{ experience.description }}
                     </p>
                   </div>
                 </div>
