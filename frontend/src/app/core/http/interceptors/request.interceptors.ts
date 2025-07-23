@@ -5,9 +5,9 @@ import {
     HttpErrorResponse,
     HttpResponse,
 } from '@angular/common/http';
-import { environment } from '../../../../environments/environment.development';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
+import { environment } from '../../../../environments/environment';
 
 export const apiHttpInterceptor: HttpInterceptorFn = (
     req: HttpRequest<any>,
