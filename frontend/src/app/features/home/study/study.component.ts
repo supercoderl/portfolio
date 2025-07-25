@@ -2,6 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { SharedModule } from '../../../shared/shared.module';
 import { ButtonComponent } from '../../../shared/components/button/button.component';
+import { Project } from '../../../shared/dto';
+import { ProjectService } from '../../../core/http/services/project.service';
 
 @Component({
   selector: 'app-study',
@@ -15,7 +17,7 @@ import { ButtonComponent } from '../../../shared/components/button/button.compon
 })
 export class StudyComponent {
   @ViewChild('owlCar', { static: false }) owlCar!: any;
-  
+
   customOptions: OwlOptions = {
     margin: 24,
     loop: true,
@@ -46,5 +48,24 @@ export class StudyComponent {
     }
   };
 
-  arr = Array.from({ length: 10 })
+  projects: Project[] = [];
+
+  constructor(private projectSrv: ProjectService) { }
+
+  ngOnInit(): void {
+    this.onLoad();
+  }
+
+  onLoad = async () => {
+    await this.projectSrv.fetchList$({ page: 1, limit: 10 }).subscribe({
+      next: (res) => {
+        if (res.total > 0) {
+          this.projects = res.data;
+        }
+      },
+      error: (err) => {
+        console.log("Error", err);
+      }
+    })
+  }
 }

@@ -1,27 +1,27 @@
 import { Injectable } from '@angular/core';
-import { Blog, ListResponse, Query } from '../../../shared/dto';
+import { ListResponse, Query, Service } from '../../../shared/dto';
 import { withApiLoading$ } from '../../../shared/utils/helpers';
-import { Observable, tap } from 'rxjs';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { HttpParams } from '@angular/common/http';
 import { ApiLoadingStore } from '../../../shared/stores/loading.store';
 import { ApiService } from './api.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class BlogService {
+export class ServiceService {
 
   constructor(
     private apiSrv: ApiService,
     private store: ApiLoadingStore
   ) { }
 
-  urlPath = "/blogs/";
+  urlPath = "/services/";
 
-  fetchList$ = (query: Query): Observable<ListResponse<Blog>> =>
-    withApiLoading$<ListResponse<Blog>>(
-      'get-blogs',
-      this.apiSrv.get<ListResponse<Blog>>(
+  fetchList$ = (query: Query): Observable<ListResponse<Service>> =>
+    withApiLoading$<ListResponse<Service>>(
+      'get-services',
+      this.apiSrv.get<ListResponse<Service>>(
         this.urlPath,
         {
           params: new HttpParams({ fromObject: query as any })

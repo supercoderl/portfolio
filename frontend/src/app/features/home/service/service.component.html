@@ -21,21 +21,18 @@
                 Service
               </div>
               <h2
-                class="mb-5 text-capitalize text-[3rem] font-semibold text-[rgb(251,_255,_237)]"
+                class="mb-5 text-capitalize text-[2.75rem] font-semibold text-[rgb(251,_255,_237)]"
               >
-                Exceptional UI/UX
-                <span class="text-[#F72C5B]">Services</span>
+                Powerful Web & App
+                <span class="text-[#F72C5B] inline">Development</span>
               </h2>
               <p class="mt-5 mb-0 text-[rgb(159,_160,_166)] text-[1.125rem]">
-                Experience excellence with our UI/UX services. From user
-                research to seamless design implementation, we in crafting
-                innovative solutions experiences and drive engagement for the
-                users of business and services.
+                Empower your business with cutting-edge web and mobile development. From idea validation to robust backend systems, we build scalable, secure, and modern applications tailored to your needs.
               </p>
             </div>
 
-            <app-button href="about" className="!rounded-full">
-              Hire me
+            <app-button href="#about" className="!rounded-full">
+              Open to work
             </app-button>
           </div>
         </div>
@@ -61,7 +58,7 @@
                   (click)="toggleCollapse(i)"
                 >
                   <span class="text-[24px] font-bold text-[#FBFFED] m-0"
-                    >Visual Design</span
+                    >{{service.title}}</span
                   >
                 </button>
                 <app-button className="!rounded-full !p-0 !w-12 !h-12 mr-8">
@@ -94,8 +91,7 @@
                 <div class="min-h-0 overflow-hidden">
                   <div class="px-8 pb-6">
                     <p class="mb-6 text-[16px] text-[rgb(173,_181,_189)]">
-                      Transform your ideas into stunning visual experiences with
-                      our expert design services.
+                      {{service.description}}
                     </p>
                   </div>
                 </div>
@@ -120,7 +116,7 @@
       class="block left-[5%] bottom-[100px] w-[40px] opacity-50 rotate-custom absolute"
     >
       <img
-        src="https://thetork.com/demos/html/torkfolio/assets/images/icon/shape/diamond-star2.svg"
+        src="../../../../assets/images/brands/blossom.png"
         alt="left to right icon"
       />
     </span>

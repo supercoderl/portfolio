@@ -23,8 +23,8 @@ export class BlogComponent implements OnInit {
     this.onLoad();
   }
 
-  onLoad = () => {
-    this.blogSrv.fetchList$({ page: 1, limit: 10 }).subscribe({
+  onLoad = async () => {
+    await this.blogSrv.fetchList$({ page: 1, limit: 10 }).subscribe({
       next: (res) => {
         if (res.total > 0) {
           this.blogs = res.data;

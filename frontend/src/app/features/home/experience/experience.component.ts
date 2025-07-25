@@ -23,8 +23,8 @@ export class ExperienceComponent implements OnInit {
     this.onLoad();
   }
 
-  onLoad = () => {
-    this.expSrv.fetchList$({ page: 1, limit: 10 }).subscribe({
+  onLoad = async () => {
+    await this.expSrv.fetchList$({ page: 1, limit: 10 }).subscribe({
       next: (res) => {
         if (res.total > 0) {
           this.experiences = res.data;
