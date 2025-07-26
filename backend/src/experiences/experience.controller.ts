@@ -2,7 +2,6 @@ import {
   Controller,
   Post,
   Body,
-  UseGuards,
   Request,
   Get,
   Delete,
@@ -11,7 +10,6 @@ import {
   Query,
 } from '@nestjs/common';
 import { ApiTags, ApiOperation } from '@nestjs/swagger';
-import { Log } from 'src/libs/utils';
 import { ExperiencesService } from './experience.service';
 import { CreateExperienceDto } from './dto/create-experience.dto';
 import { Experience } from './experience.entity';

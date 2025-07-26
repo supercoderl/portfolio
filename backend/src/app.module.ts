@@ -10,12 +10,15 @@ import { ExperiencesModule } from './experiences/experience.module';
 import { BlogsModule } from './blogs/blog.module';
 import { MailsModule } from './mails/mail.module';
 import configDefault from './config/config.default';
+import { ServicesModule } from './services/service.module';
+import { ProjectsModule } from './projects/project.module';
 
 @Module({
   imports: [
     //Configuration module
     ConfigModule.forRoot({
-      isGlobal: false,
+      isGlobal: true,
+      envFilePath: '.env',
       load: [configDefault]
     }),
     // TypeOrm module
@@ -44,7 +47,9 @@ import configDefault from './config/config.default';
     //Business module...
     ExperiencesModule,
     BlogsModule,
-    MailsModule
+    MailsModule,
+    ServicesModule,
+    ProjectsModule
   ],
   controllers: [AppController],
   providers: [AppService],

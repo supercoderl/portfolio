@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SharedModule } from '../../shared.module';
 import { faFacebookF, faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-sidebar',
@@ -16,4 +17,12 @@ export class SidebarComponent {
   faTwitter = faTwitter;
   faLinkedin = faLinkedin;
   faGithub = faGithub;
+  faMenu = faBars;
+  faClose = faClose;
+
+  isOpen = false;
+
+  toggleNav() {
+    this.isOpen = !this.isOpen;
+  }
 }

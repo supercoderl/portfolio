@@ -1,6 +1,6 @@
-<section id="blog" class="py-[90px] bg-[#141413] overflow-hidden relative">
-  <div class="max-w-[1170px] w-full px-3 mx-auto">
-    <div class="pb-[45px] flex items-center justify-between">
+<section id="blog" class="py-[50px] md:py-[90px] bg-[#141413] overflow-hidden relative">
+  <div class="md:max-w-[1170px] w-full px-3 mx-auto">
+    <div class="pb-[45px] md:flex items-center justify-between">
       <div>
         <div
           class="text-[1.125rem] font-medium text-[#56DFCF] mb-2.5 flex items-center"
@@ -12,16 +12,16 @@
           /></span>
           My Blog
         </div>
-        <h2 class="mb-5 text-white text-[3rem] font-semibold">
+        <h2 class="mb-5 text-white text-[1.5rem] md:text-[2.75rem] font-semibold">
           Latest From <span class="text-[#F72C5B]">Blog</span>
         </h2>
       </div>
       <div>
-        <app-button className="!rounded-full"> View all </app-button>
+        <app-button className="w-fit"> View all </app-button>
       </div>
     </div>
     <div class="z-[2] relative">
-      <div class="grid grid-cols-3 justify-center gap-7 -mx-3">
+      <div class="grid md:grid-cols-3 justify-center gap-7 md:-mx-3">
         <div *ngFor="let blog of blogs">
           <div class="group">
             <div

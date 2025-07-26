@@ -3,14 +3,16 @@ import { ButtonComponent } from "../../../shared/components/button/button.compon
 import { SharedModule } from '../../../shared/shared.module';
 import { ExperienceService } from '../../../core/http/services/experience.service';
 import { Experience } from '../../../shared/dto';
+import { CardComponent } from "./components/card/card.component";
 
 @Component({
   selector: 'app-experience',
   standalone: true,
   imports: [
     ButtonComponent,
-    SharedModule
-  ],
+    SharedModule,
+    CardComponent
+],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss'
 })

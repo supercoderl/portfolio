@@ -1,12 +1,12 @@
 <section
   id="service"
-  class="py-[90px] bg-size-[100px] w-full h-full overflow-hidden relative after:content-[''] after:bg-[#0A0A09] after:bg-[100px_100px] after:w-full after:h-full after:top-0 after:left-0 after:opacity-40 after:-z-[2] after:absolute"
+  class="py-[50px] md:py-[90px] bg-size-[100px] w-full h-full overflow-hidden relative after:content-[''] after:bg-[#0A0A09] after:bg-[100px_100px] after:w-full after:h-full after:top-0 after:left-0 after:opacity-40 after:-z-[2] after:absolute"
 >
-  <div class="max-w-[1080px] w-full mx-auto px-3">
-    <div class="aos-init aos-animate">
+  <div class="md:max-w-[1080px] w-full mx-auto px-3">
+    <div>
       <div class="flex flex-wrap -mx-3 -mt-6">
         <!-- Left Column -->
-        <div class="flex-[0_0_auto] w-[41.66666667%] px-3 mt-6">
+        <div class="md:flex-[0_0_auto] md:w-[41.66666667%] px-3 mt-6">
           <div>
             <div class="pb-12">
               <div
@@ -21,7 +21,7 @@
                 Service
               </div>
               <h2
-                class="mb-5 text-capitalize text-[2.75rem] font-semibold text-[rgb(251,_255,_237)]"
+                class="mb-5 text-capitalize text-[1.5rem] md:text-[2.75rem] font-semibold text-[rgb(251,_255,_237)]"
               >
                 Powerful Web & App
                 <span class="text-[#F72C5B] inline">Development</span>
@@ -31,21 +31,21 @@
               </p>
             </div>
 
-            <app-button href="#about" className="!rounded-full">
+            <app-button href="#about" className="w-fit">
               Open to work
             </app-button>
           </div>
         </div>
 
         <!-- Right Column -->
-        <div class="flex-[0_0_auto] w-[58.33333333%] px-3 mt-6">
+        <div class="md:flex-[0_0_auto] md:w-[58.33333333%] px-3 mt-6">
           <div
-            class="pl-[40px] gap-[1rem] relative grid"
+            class="md:pl-[40px] gap-[1rem] relative grid"
             id="servicesAccordion"
           >
             <!-- Card 1 -->
             <div
-              class="bg-[#141413] relative rounded-[12px] overflow-hidden"
+              class="bg-[#141413] relative rounded-[12px] overflow-hidden after:hidden md:after:block"
               id="service-item"
               *ngFor="let service of services; let i = index"
             >
@@ -53,7 +53,7 @@
                 class="bg-[#141413] rounded-[12px] items-center justify-between flex"
               >
                 <button
-                  class="rounded-t-[5px] cursor-pointer z-[2] py-[1.5rem] px-[2rem] flex-[1_1_0%] relative flex items-center w-full text-[1rem]"
+                  class="text-left md:text-center rounded-t-[5px] cursor-pointer z-[2] py-6 md:px-8 flex-[1_1_0%] relative flex items-center w-full text-[1rem]"
                   type="button"
                   (click)="toggleCollapse(i)"
                 >
@@ -61,7 +61,7 @@
                     >{{service.title}}</span
                   >
                 </button>
-                <app-button className="!rounded-full !p-0 !w-12 !h-12 mr-8">
+                <app-button style="width: fit-content;" className="!rounded-full !p-0 !w-12 !h-12 md:mr-8">
                   <svg
                     class="svg-inline--fa fa-arrow-right-long transition-transform duration-300"
                     [class.-rotate-45]="expandedIndex === i"
@@ -89,7 +89,7 @@
                 [class.grid-rows-[0fr]]="expandedIndex !== i"
               >
                 <div class="min-h-0 overflow-hidden">
-                  <div class="px-8 pb-6">
+                  <div class="md:px-8 pb-6">
                     <p class="mb-6 text-[16px] text-[rgb(173,_181,_189)]">
                       {{service.description}}
                     </p>
@@ -106,14 +106,14 @@
     class="-bottom-[10%] -left-[10%] w-[390px] h-[390px] bg-[rgba(196,_239,_23,_0.2)] blur-[100px] -z-[1] rounded-full absolute"
   ></div>
   <div>
-    <span class="block left-[200px] top-[500px] floating-custom absolute"
+    <span class="hidden md:block left-[200px] top-[500px] floating-custom absolute"
       ><img
         src="https://thetork.com/demos/html/torkfolio/assets/images/icon/shape/lefttorightarrow-lg.svg"
         alt="left to right icon"
     /></span>
 
     <span
-      class="block left-[5%] bottom-[100px] w-[40px] opacity-50 rotate-custom absolute"
+      class="hidden md:block left-[5%] bottom-[100px] w-[40px] opacity-50 rotate-custom absolute"
     >
       <img
         src="../../../../assets/images/brands/blossom.png"

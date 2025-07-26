@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsBoolean, IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import { IsArray, IsBoolean, IsNotEmpty, IsNumber, IsString } from 'class-validator';
 export class UpdateExperienceDto {
   @ApiProperty()
   @IsNotEmpty()
@@ -19,10 +19,30 @@ export class UpdateExperienceDto {
   @ApiProperty()
   @IsNotEmpty()
   @IsString()
+  content: string;
+
+  @ApiProperty()
+  @IsNotEmpty()
+  @IsString()
   startDate: string;
 
   @ApiProperty()
   endDate: string;
+
+  @ApiProperty()
+  @IsNotEmpty()
+  @IsArray()
+  technologies: string[];
+
+  @ApiProperty()
+  @IsNotEmpty()
+  @IsArray()
+  responsibilities: string[];
+
+  @ApiProperty()
+  @IsNotEmpty()
+  @IsArray()
+  archivements: string[];
 
   @ApiProperty()
   @IsNotEmpty()

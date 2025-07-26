@@ -26,8 +26,12 @@ export interface Experience {
     company: string;
     title: string;
     description: string;
+    content: string;
     startDate: string;
     endDate?: string;
+    technologies: string[];
+    responsibilities: string[];
+    archivements: string[];
     isCurrent: boolean;
     order: number;
     cretedAt: Date;

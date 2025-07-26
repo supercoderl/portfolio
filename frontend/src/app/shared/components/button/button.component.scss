@@ -5,7 +5,6 @@
   align-items: center;
   overflow: hidden;
   height: 3.25rem;
-  width: fit-content;
   padding-inline: 1rem;
   background-size: 300% 300%;
   cursor: pointer;
@@ -34,7 +33,6 @@
   overflow: hidden;
   transition: 0.5s;
   backdrop-filter: blur(8rem);
-  border-radius: 5rem;
 }
 
 strong {
@@ -172,5 +170,11 @@ strong {
   100% {
     transform: scale(0.75);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+:host {
+  @media (max-width: 768px) {
+    width: 100%;
   }
 }

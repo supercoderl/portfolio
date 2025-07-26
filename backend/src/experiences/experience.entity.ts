@@ -16,10 +16,22 @@ export class Experience {
     description: string;
 
     @Column()
+    content: string;
+
+    @Column()
     startDate: string;
 
     @Column({ nullable: true })
     endDate?: string;
+
+    @Column()
+    technologies: string[];
+
+    @Column()
+    responsibilities: string[];
+
+    @Column()
+    archivements: string[];
 
     @Column()
     isCurrent: boolean;

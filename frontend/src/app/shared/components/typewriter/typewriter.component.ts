@@ -4,11 +4,10 @@ import { Component, OnInit, OnDestroy, NgZone, Input } from '@angular/core';
     selector: 'app-multi-typewriter',
     standalone: true,
     template: `
-    <h1 class="typewriter-text">{{ displayText }}<span class="cursor">|</span></h1>
+    <h1 class="typewriter-text text-[38.0752px] md:text-[3rem]">{{ displayText }}<span class="cursor">|</span></h1>
   `,
     styles: [`
     .typewriter-text {
-      font-size: 3rem;
       font-weight: 700;
       color: white;
       font-family: monospace;
